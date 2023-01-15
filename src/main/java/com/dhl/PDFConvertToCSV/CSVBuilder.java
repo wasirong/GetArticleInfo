@@ -40,8 +40,13 @@ public class CSVBuilder {
                     "商品编号", "商品名称", "规格型号", "海关编号", "提运单号",
             });
             for (InputCSVData inputCSVData : ArticleInfoInstance.getGf().allInputCSVData) {
+
+                String customsNo = inputCSVData.getCustomsNo();
+                if (!customsNo.equals("")){
+                    customsNo = "'" + customsNo.trim();
+                }
                 temData.add(new String[]{inputCSVData.getHWB(), inputCSVData.getNum(),
-                        inputCSVData.getArticleNo(), inputCSVData.getArticleName(), inputCSVData.getSpecifications(), inputCSVData.getCustomsNo(), inputCSVData.getDeliveryNumbers()
+                        inputCSVData.getArticleNo(), inputCSVData.getArticleName(), inputCSVData.getSpecifications(), customsNo, inputCSVData.getDeliveryNumbers()
                 });
             }
 
