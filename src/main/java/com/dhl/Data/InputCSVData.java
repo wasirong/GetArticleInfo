@@ -29,7 +29,12 @@ public class InputCSVData {
     }
 
     public String getCustomsNo() {
-        return CustomsNo.get();
+        String temp = CustomsNo.get();
+        if (!temp.equals("")){
+            return "'" + temp.trim();
+        }
+
+        return temp;
     }
 
     public void setCustomsNo(String customsNo) {

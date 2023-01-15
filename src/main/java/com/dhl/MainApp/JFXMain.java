@@ -15,7 +15,7 @@ public class JFXMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainScreen.fxml"));
-        primaryStage.setTitle("DHL商品信息获取工具 Version.2.0.0.1");
+        primaryStage.setTitle("DHL商品信息获取工具 Version.2.0.0.2");
         primaryStage.setScene(new Scene(root, 1522, 818));
         primaryStage.show();
 
